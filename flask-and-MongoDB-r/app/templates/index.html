@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Community Events Board</title>
+    </head>
+    <body>
+      <h1>Community Events Board</h1>
+      <ul>
+        {% for event in events.keys() %}
+          <li>{{ event }} - {{ events.get(event) }}</li>
+        {% endfor %}
+      </ul>
+      <form method = "POST" action="/input">
+        <input type="submit" value="Add items">
+      </form>
+      <form method = "POST" action="/login">
+        <input type="submit" name="delete_all", value = "delete all events">
+      </form>
+
+
+
+      <!-- <div class="event-list">
+        <ul>
+          {% for event in events %}
+            <li>{{ event.event }} - {{ event.date }}</li>
+          {% endfor %}
+        </ul>
+      </div> -->
+    </body>
+</html>
